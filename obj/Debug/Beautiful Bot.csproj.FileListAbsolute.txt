@@ -1,0 +1,53 @@
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\obj\Debug\Beautiful Bot.csprojResolveAssemblyReference.cache
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Beautiful Bot.exe.config
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Beautiful Bot.exe
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Beautiful Bot.pdb
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Commands.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Core.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Rest.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Rpc.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Webhook.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.WebSocket.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Microsoft.Win32.Primitives.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Newtonsoft.Json.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.AppContext.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Collections.Immutable.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Console.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Diagnostics.Tracing.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Globalization.Calendars.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Interactive.Async.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.IO.Compression.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.IO.Compression.ZipFile.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.IO.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.IO.FileSystem.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.IO.FileSystem.Primitives.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Net.Http.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Net.Sockets.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Reflection.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Runtime.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Runtime.Extensions.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Runtime.InteropServices.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Security.Cryptography.Algorithms.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Security.Cryptography.Encoding.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Security.Cryptography.Primitives.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Xml.ReaderWriter.dll
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Commands.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Core.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Rest.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Rpc.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.Webhook.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Net.WebSocket.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Newtonsoft.Json.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Collections.Immutable.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\System.Interactive.Async.xml
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\obj\Debug\Beautiful Bot.exe
+c:\users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\obj\Debug\Beautiful Bot.pdb
+C:\Users\bv2803\documents\visual studio 2017\Projects\Beautiful Bot\Beautiful Bot\bin\Debug\Discord.Addons.Interactive.dll

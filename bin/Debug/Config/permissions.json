@@ -1,0 +1,14 @@
+{
+  "Groups": [
+    {
+      "GroupName": "default",
+      "Members": [],
+      "Commands": ["default"]
+    },
+    {
+      "GroupName": "admin",
+      "Members": ["186476816503013377", "280503360103251969", "366566753498824705"],
+      "Commands": ["admin"]
+    }
+  ]
+}
