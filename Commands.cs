@@ -11,7 +11,7 @@ using JsonConfig;
 using Discord.Commands;
 using System.Threading;
 using BotTools.Handlers;
-using Beautiful_Bot;
+using CruxBot;
 
 namespace Crux.Commands
 {
@@ -95,6 +95,8 @@ namespace Crux.Commands
                 eb.AddField("Name: Dyno", "Prefix: &");
                 eb.AddField("Name: Marv", "Prefix: -");
                 eb.AddField("Name: Mee6", "Prefix: !");
+
+                eb.Color = Color.LightGrey;
 
                 var sentMsg = await msg.Channel.SendMessageAsync("", embed: eb);
 

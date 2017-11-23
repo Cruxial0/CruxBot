@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Beautiful_Bot;
+using CruxBot;
 
 namespace BadWordFilter
 {
     public class BadwordFilter
     {
-        internal static List<string> badWords = new List<string> {"nigga", "nigger", "nazi", "niggas", "niggers"};
+        internal static List<string> badWords = new List<string> {"nigga", "nigger", "nazi", "niggas", "niggers", "n1gg3r", "n1gger", "nigg3r", "n!gger", "nigg£r", "nigg€r", "n!gg£r", "n!gg€r" };
         internal static Task OnChat(SocketMessage arg)
         {
             Task.Run(async () =>

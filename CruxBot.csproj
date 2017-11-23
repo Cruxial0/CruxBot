@@ -51,7 +51,7 @@
     </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Beautiful_Bot.Program</StartupObject>
+    <StartupObject>CruxBot.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Discord.Addons.Interactive, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -182,7 +182,7 @@
     <Compile Include="Interfaces\IDiscordCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BotConfig.cs" />
+    <Compile Include="ConfigBot.cs" />
     <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\PermissionHelper.cs" />
   </ItemGroup>

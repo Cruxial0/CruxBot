@@ -10,7 +10,7 @@ using Crux.Config;
 using BotTools.Utils;
 using Crux.Commands;
 
-namespace Beautiful_Bot
+namespace CruxBot
 {
     public interface IDependencyMap
     {
