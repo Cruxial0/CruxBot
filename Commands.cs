@@ -819,7 +819,60 @@ namespace Crux.Commands
             });
         }
     }
-    
+
+    public class Freestyle : IDiscordCommand
+    {
+        public string Name => "freestyle";
+
+        public string Help => "Starts a loop of words for any occuring freestyle battle (needs a moderator to start)";
+
+        public string Syntax => "<diffculty>";
+
+        public string Permission => "admin";
+
+        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
+        {
+#pragma warning disable CS1998
+            Task.Run(async () =>
+            {
+                if (parameters.Length < 1)
+                {
+                    await msg.Channel.SendMessageAsync($"**Correct usage:** `;;{Name} {Syntax}`");
+                    return;
+                }
+
+                if (parameters.Length > 1)
+                {
+                    await msg.Channel.SendMessageAsync($"**Correct usage:** `;;{Name} {Syntax}`");
+                    return;
+                }
+
+                var TCfreestyle = Program.client.GetChannel(383276102853984266) as SocketTextChannel;
+                var content = msg.Content;
+
+                if (parameters.Contains("easy"))
+                {
+                    await msg.Channel.SendMessageAsync($"Starting word loop in **#{TCfreestyle.Name}** ({TCfreestyle.Id})");
+
+                    Task.Run(async () =>
+                    {
+                        while (true)
+                        {
+                            FreestyleEasy.FreestyleEZ();
+                            await Task.Delay(6000);
+                        }
+                    });
+                }
+
+                if (content.ToLower() != "easy")
+                {
+                    await msg.Channel.SendMessageAsync($"**Correct usage:** `;;{Name} {Syntax}`");
+                    return;
+                }
+            });
+#pragma warning restore CS1998
+        }
+    }
 
     public class Shutdown : IDiscordCommand
     {
