@@ -25,6 +25,62 @@ namespace Crux.Commands
         }
     }
 
+    class EmbedTest : IDiscordCommand
+    {
+        public string Name => "ModHelp";
+
+        public string Help => "Shows all moderator commands (only executable by Moderators)";
+
+        public string Syntax => "";
+
+        public string Permission => "admin";
+
+        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
+        {
+            Task.Run(async () =>
+            {
+                if (parameters.Length > 0)
+                {
+                    await msg.Channel.SendMessageAsync("**This command does not take parameters**");
+                    return;
+                }
+
+                EmbedBuilder eb = new EmbedBuilder();
+                EmbedFooterBuilder ef = new EmbedFooterBuilder();
+
+                //await msg.DeleteAsync();
+
+                eb.Color = Color.DarkRed;
+
+                ef.WithText("I have no clue what this does..");
+                ef.Text = "CMS";
+                eb.WithFooter(footer: ef);
+
+                eb.Title = "Very nice title indeed!";
+                eb.Description = "This is just me testing stuff out.";
+
+
+                eb.ThumbnailUrl = "https://www.askideas.com/media/40/Wolf-Funny-Face-Expression-Image.jpg";
+                eb.ImageUrl = "https://vignette3.wikia.nocookie.net/animal-jam-clans-1/images/c/cd/223731-wolf-lovers-wolf-banner-1.jpg/revision/latest?cb=20170108024653";
+
+                eb.AddField("Hey", ":D");
+                eb.AddInlineField("who", "dis?");
+                eb.AddInlineField("who", "dis?");
+                eb.AddInlineField("who", "dis?");
+                eb.AddInlineField("who", "dis?");
+                
+                eb.Timestamp = DateTime.Now;
+                eb.WithCurrentTimestamp();
+
+                //await msg.Author.GetOrCreateDMChannelAsync();
+                //await msg.Author.SendMessageAsync("**CruxBot**", embed: eb);
+
+                await msg.Channel.SendMessageAsync("", embed: eb);
+            });
+        }
+
+    }
+
     class Help : IDiscordCommand
     {
         public string Name => "help";
@@ -871,6 +927,24 @@ namespace Crux.Commands
                 }
             });
 #pragma warning restore CS1998
+        }
+    }
+
+    public class OpenFreestyle : IDiscordCommand
+    {
+        public string Name => "OpenFreestyle";
+
+        public string Help => "Opens the channel for everyone to see";
+
+        public string Syntax => "";
+
+        public string Permission => "admin";
+
+        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
+        {
+            var TCfreestyle = Program.client.GetChannel(383276102853984266) as SocketTextChannel;
+            var content = msg.Content;
+            
         }
     }
 
