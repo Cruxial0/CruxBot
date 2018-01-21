@@ -43,6 +43,7 @@ namespace CruxBot
             await client.StartAsync();
 
             client.MessageReceived += BadWordFilter.BadwordFilter.OnChat;
+            client.MessageReceived += CruxBot.Anti_Advertising.OnChat;
 
             await Task.Delay(-1, cancelSrc.Token);
         }

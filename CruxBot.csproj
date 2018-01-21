@@ -172,6 +172,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdaptiveHelpCommand.cs" />
+    <Compile Include="Anti-Advertising.cs" />
     <Compile Include="BadwordFilter.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="ConfigJson.cs" />

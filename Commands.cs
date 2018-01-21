@@ -68,7 +68,7 @@ namespace Crux.Commands
                 eb.AddInlineField("who", "dis?");
                 eb.AddInlineField("who", "dis?");
                 eb.AddInlineField("who", "dis?");
-                
+
                 eb.Timestamp = DateTime.Now;
                 eb.WithCurrentTimestamp();
 
@@ -81,46 +81,11 @@ namespace Crux.Commands
 
     }
 
-    class Help : IDiscordCommand
-    {
-        public string Name => "help";
-
-        public string Syntax => "";
-
-        public string Permission => "default";
-
-        string IDiscordCommand.Help => "";
-
-        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
-        {
-
-            await Task.Run(async () =>
-            {
-                EmbedBuilder eb = new EmbedBuilder();
-
-                await msg.DeleteAsync();
-
-                //CruxBot Commands
-                eb.Color = Color.Green;
-
-                eb.AddField("Command: ;;help", "**Summary:** Shows all this, i just lead you into a loop.");
-                eb.AddField("Command: ;;prefixes", "**Summary:** Shows all bot Prefixes.");
-                eb.AddField("Command: ;;roulette", "**Summary:** A fun command based of off Russian Roulette.");
-                eb.AddField("Command: ;;staff", "**Summary:** Shows a list of all the current Unturned Server moderators.");
-                eb.AddField("Command: ;;VIP", "**Summary:** Shows all the advantages you get by donating.");
-                eb.AddField("Command: ;;apply", "**Summary:** Adds you to a list that Moderators can check.");
-
-                await msg.Author.GetOrCreateDMChannelAsync();
-                await msg.Author.SendMessageAsync("**CruxBot**", embed: eb);
-            });
-        }
-    }
-
     class Test : IDiscordCommand
     {
         public string Name => "T";
 
-        public string Help => "";
+        public string Help => "A command to test if the bot is working properly";
 
         public string Syntax => "";
 
@@ -138,7 +103,7 @@ namespace Crux.Commands
 
         public string Help => "";
 
-        public string Syntax => "";
+        public string Syntax => "Shows all the prefixes of the different bots";
 
         public string Permission => "Default";
 
@@ -169,7 +134,7 @@ namespace Crux.Commands
 
         public string Help => "";
 
-        public string Syntax => "";
+        public string Syntax => "Shows information about the Roulette command";
 
         public string Permission => "default";
 
@@ -201,7 +166,7 @@ namespace Crux.Commands
     {
         public string Name => "roulette_1";
 
-        public string Help => "";
+        public string Help => "Use ;;Roulette for information";
 
         public string Syntax => "";
 
@@ -243,7 +208,7 @@ namespace Crux.Commands
     {
         public string Name => "roulette_2";
 
-        public string Help => "";
+        public string Help => "Use ;;Roulette for information";
 
         public string Syntax => "";
 
@@ -289,7 +254,7 @@ namespace Crux.Commands
     {
         public string Name => "roulette_3";
 
-        public string Help => "";
+        public string Help => "Use ;;Roulette for information";
 
         public string Syntax => "";
 
@@ -339,7 +304,7 @@ namespace Crux.Commands
     {
         public string Name => "roulette_4";
 
-        public string Help => "";
+        public string Help => "Use ;;Roulette for information";
 
         public string Syntax => "";
 
@@ -385,7 +350,7 @@ namespace Crux.Commands
     {
         public string Name => "roulette_5";
 
-        public string Help => "";
+        public string Help => "Use ;;Roulette for information";
 
         public string Syntax => "";
 
@@ -427,7 +392,7 @@ namespace Crux.Commands
     {
         public string Name => "staff";
 
-        public string Help => "";
+        public string Help => "Shows all the current members of the staff";
 
         public string Syntax => "";
 
@@ -458,7 +423,7 @@ namespace Crux.Commands
     {
         public string Name => "apply";
 
-        public string Help => "";
+        public string Help => "Apply to anything using this command";
 
         public string Syntax => "";
 
@@ -499,7 +464,7 @@ namespace Crux.Commands
     {
         public string Name => "checkapply";
 
-        public string Help => "";
+        public string Help => "Checks who has applied (only executable by moderators)";
 
         public string Syntax => "";
 
@@ -524,7 +489,7 @@ namespace Crux.Commands
     {
         public string Name => "applyclear";
 
-        public string Help => "";
+        public string Help => "Clear employment list (only executable by moderators)";
 
         public string Syntax => "";
 
@@ -545,54 +510,12 @@ namespace Crux.Commands
         }
     }
 
-    class VIPadvantages : IDiscordCommand
-    {
-        public string Name => "VIP";
 
-        public string Help => "";
-
-        public string Syntax => "";
-
-        public string Permission => "default";
-
-        public Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
-        {
-            Task.Run(async () =>
-            {
-                var msg1 = await msg.Channel.SendMessageAsync("**Why buy VIP?:**\n -You get an ingame name color\n -You get the permission to warp anywhere on the map every 30 minutes \n -You can use /heal every 3 minutes\n -You get alot of cooldowns on commands such as /i and /v \n -You get the 'Donor' discord role.");
-
-                await Task.Delay(10000);
-
-                await msg1.DeleteAsync();
-                await msg.DeleteAsync();
-            });
-            return Task.CompletedTask;
-        }
-    }
-
-    class Advertise : IDiscordCommand
-    {
-        public string Name => "Advertise";
-
-        public string Help => "Use this command to advertise.";
-
-        public string Syntax => "advertisement";
-
-        public string Permission => "admin";
-
-        public async Task ExecuteAsync(SocketUserMessage input, string[] parameters)
-        {
-            await input.DeleteAsync();
-
-            var botmsg = await input.Channel.SendMessageAsync($"```{input.Content.Replace(";;advertise", "")}```");
-        }
-    }
-
-    class Ban : ModuleBase<CommandContext>, IDiscordCommand
+    class Ban : Program, IDiscordCommand
     {
         public string Name => "ban";
 
-        public string Help => "moderation command";
+        public string Help => "Ban a user (only executable by moderators)";
 
         public string Syntax => "<@username> (reason)";
 
@@ -635,7 +558,7 @@ namespace Crux.Commands
                             await msg.Author.SendMessageAsync($"Failed to send DM to **{target.Username}.\nError message: {e.Message}");
                         }
 
-                        var TextChannelLogs = Program.client.GetChannel(353561970038931458) as SocketTextChannel;
+                        var TextChannelLogs = client.GetChannel(353561970038931458) as SocketTextChannel;
 
                         EmbedBuilder eb = new EmbedBuilder();
 
@@ -663,7 +586,7 @@ namespace Crux.Commands
     {
         public string Name => "Warn";
 
-        public string Help => "warns a user";
+        public string Help => "Warn a user (only executable by moderators)";
 
         public string Syntax => "<@username> <reason>";
 
@@ -705,7 +628,7 @@ namespace Crux.Commands
     {
         public string Name => "Kick";
 
-        public string Help => "Admin command to kick a user";
+        public string Help => "Kick a user (only executable by moderators)";
 
         public string Syntax => "<@username> (reason)";
 
@@ -756,7 +679,7 @@ namespace Crux.Commands
     {
         public string Name => "magic8ball";
 
-        public string Help => "Ask me a question and i will answer it";
+        public string Help => "Ask a question you want aswered";
 
         public string Syntax => "<question>";
 
@@ -930,39 +853,104 @@ namespace Crux.Commands
         }
     }
 
-    public class OpenFreestyle : IDiscordCommand
+    public class ServerInfo : IDiscordCommand
     {
-        public string Name => "OpenFreestyle";
+        public string Name => "ServerInfo";
 
-        public string Help => "Opens the channel for everyone to see";
+        public string Help => "Shows the server info";
 
         public string Syntax => "";
 
-        public string Permission => "admin";
+        public string Permission => "default";
 
         public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
-            var TCfreestyle = Program.client.GetChannel(383276102853984266) as SocketTextChannel;
-            var content = msg.Content;
-            
+            if (parameters.Length > 0)
+            {
+                await msg.Channel.SendMessageAsync($"**This message does not take parameters**");
+            }
+
+            SocketGuild server = ((SocketGuildChannel)msg.Channel).Guild;
+
+            EmbedBuilder eb = new EmbedBuilder();
+            EmbedFooterBuilder ef = new EmbedFooterBuilder();
+
+            ef.WithText($"{server.Name}");
+            eb.WithFooter(footer: ef);
+
+            eb.ThumbnailUrl = $"{server.IconUrl}";
+            eb.AddInlineField("Owner", $"{server.Owner}");
+            eb.AddInlineField("Member Count", $"{server.MemberCount}");
+            eb.AddInlineField("Creation Date", $"{server.CreatedAt.LocalDateTime}");
+            eb.AddInlineField("Region", $"{server.VoiceRegionId.ToUpperInvariant()}");
+            eb.AddInlineField("Text Channels", $"{server.TextChannels.Count}");
+            eb.AddInlineField("Voice Channels", $"{server.VoiceChannels.Count}");
+
+            eb.WithCurrentTimestamp();
+
+            await msg.Channel.SendMessageAsync($"", embed: eb);
         }
     }
 
-    public class Shutdown : IDiscordCommand
+    public class UserInfo : IDiscordCommand
     {
-        public string Name => "Shutdown";
+        public string Name => "UserInfo";
 
-        public string Help => "shuts down the bot";
+        public string Help => "Shows information about the caller";
 
-        public string Syntax => "";
+        public string Syntax => "(@username)";
 
-        public string Permission => "admin";
+        public string Permission => "default";
 
-        public async Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
+        public Task ExecuteAsync(SocketUserMessage msg, string[] parameters)
         {
-            await msg.Channel.SendMessageAsync("**Shutting Down...**");
-            await Program.client.StopAsync();
-            Program.cancelSrc.Cancel();
+            Task.Run(async () =>
+            {
+                    EmbedBuilder eb = new EmbedBuilder();
+                    EmbedFooterBuilder ef = new EmbedFooterBuilder();
+
+                    string targetId = msg.MentionedUsers.Count == 1 ? msg.MentionedUsers.First().Id.ToString() : parameters[1];
+                    SocketGuild server = ((SocketGuildChannel)msg.Channel).Guild;
+                    SocketGuildUser target = server.Users.FirstOrDefault(x => x.Id.ToString() == targetId);
+                    var author = msg.Author;
+
+                if (parameters.Length > 1)
+                {
+                    msg.Channel.SendMessageAsync($"Correct Usage: `;;{Name} {Syntax}");
+                }
+
+                if(target == null)
+                {
+                    ef.WithText(author.Username);
+                    eb.WithFooter(footer: ef);
+
+                    eb.Color = Color.DarkTeal;
+
+                    eb.AddInlineField("User Creation Date", $"{author.CreatedAt.DateTime}");
+                    eb.AddInlineField("Currently Playing", $"{author.Game}");
+                    eb.AddInlineField("Is Bot User", $"{author.IsBot}");
+                    eb.AddInlineField("Status", $"{author.Status}");
+                    eb.AddInlineField("Username", $"{author.Username}");
+
+                    eb.WithCurrentTimestamp();
+
+                    msg.Channel.SendMessageAsync($"", embed: eb);
+                }
+
+                ef.WithText(target.Nickname);
+                    eb.WithFooter(footer: ef);
+
+                    eb.ThumbnailUrl = author.GetAvatarUrl();
+
+                    eb.AddInlineField("Username", $"{target.Username}");
+                    eb.AddInlineField("Nickname", $"{target.Nickname}");
+                    eb.AddInlineField("Join Date", $"{target.JoinedAt}");
+                    eb.AddInlineField("Is Bot User", $"{target.IsBot}");
+                    eb.AddInlineField("Status", $"{target.Status}");
+
+                    await msg.Channel.SendMessageAsync("", embed: eb);
+            });
+            return Task.CompletedTask;
         }
     }
 }
